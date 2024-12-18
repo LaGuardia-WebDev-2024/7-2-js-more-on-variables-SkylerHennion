@@ -6,6 +6,8 @@ void setup() {
 //🎯Varaible Declarations Go Here
 var x = 200;
 var y = 100;
+var EyeSize = 20;
+var EyeLightSize = 10;
 
 //🟢Draw Procedure - Runs on Repeat
 void draw(){
@@ -23,6 +25,36 @@ void draw(){
   fill(255, 255, 255); // for the whites of the eyes!
   ellipse(x - 50, y - 50, 30, 30); // left eyeball
   ellipse(x + 50, y - 50, 30, 30); // right eyeball
+  
+  fill(0,0,0); //pupil
+  ellipse(x-50,y-50,EyeSize,EyeSize);//left eyeball
+  ellipse(x+50,y-50,EyeSize,EyeSize);//right eyeball
+  
+  fill(255,255,255);//eyelight
+  ellipse(x-44,y-55,EyeLightSize,EyeLightSize)
+  ellipse(x+56,y-55,EyeLightSize,EyeLightSize)
+  ellipse(x-50,y-50,5,5)
+  ellipse(x+50,y-50,5,5)
+  
+  fill(255,0,0);//mouth
+  ellipse(x, y+10, 80,30)
+
+   
+  fill(255,255,255);//teeth
+  rect(x-15,y-4,10,10)
+  rect(x+5,y-4,10,10)
+  
+  
+  
+  
+  x++;
+  
+  if(x > 400){
+   x = -200;
+  }
+  //y++
+ //x = mouseX;
+//y = mouseY;
   
 
 }
